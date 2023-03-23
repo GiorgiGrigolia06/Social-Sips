@@ -83,9 +83,72 @@ body {
   font-size: 25.3px;
 }
 
-/* Styles for devices with a viewport width of 375px and height of 667px */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-  /* Your CSS styles here */
+/* Styles for devices with a viewport width of 1145px and height of 775px */
+@media only screen and (max-width: 1145px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 954px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 747px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 653px) {
+  .welcome-message1,
+  .welcome-message2,
+  .welcome-message3 {
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 559px) {
+  .welcome-message1,
+  .welcome-message2,
+  .welcome-message3 {
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 559px) {
+  .welcome-message1,
+  .welcome-message2,
+  .welcome-message3 {
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 24px;
+  }
+  .name {
+    font-size: 30px;
+  }
+
+  .slogan {
+    font-size: 25px;
+  }
+
+  .name-slogan {
+    gap: 0.3rem;
+  }
+
+  .container {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-device-width: 375px) {
   body {
     height: 100%;
   }
