@@ -1,9 +1,8 @@
 body {
   padding: 2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-color: rgba(129, 125, 255, 1);
 }
 
@@ -29,8 +28,6 @@ body {
   padding: 0 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 2rem;
   border-radius: 0.8rem;
   font-size: 25px;
@@ -73,6 +70,7 @@ body {
   font-size: 25px;
   cursor: pointer;
   background-color: rgb(255, 255, 255);
+  color: #000;
   transition: 0.6s;
   text-align: center;
 }
@@ -81,6 +79,57 @@ body {
   background-color: rgba(255, 205, 30, 1);
   transition: 0.6s;
 }
+
+/* CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+}
+
+.question-1-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Inconsolata", monospace;
+  color: rgb(49, 49, 49);
+}
+
+.question-1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Inconsolata", monospace;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  border: none;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+}
+
+.answer-options {
+  background-color: #fff;
+  color: rgba(129, 125, 255, 1);
+  font-weight: 700;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+/* END OF CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */
 
 /* Styles for screens smaller than 600px */
 @media only screen and (max-width: 600px) {
@@ -96,6 +145,12 @@ body {
 
   .slogan {
     font-size: 20px;
+  }
+
+  .welcome-message1,
+  .welcome-message2,
+  .welcome-message3 {
+    text-align: center;
   }
 
   .start-button {
