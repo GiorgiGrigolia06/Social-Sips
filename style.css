@@ -35,6 +35,7 @@ body {
   font-family: "Inconsolata", monospace;
   color: rgb(255, 255, 255);
   line-height: 110%;
+  /* display: none; */
 }
 
 .welcome-message1,
@@ -83,10 +84,13 @@ body {
 /* CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */
 
 .quiz {
+  display: none;
+}
+
+.first-question-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  display: none;
 }
 
 .question-1-header {
@@ -98,7 +102,7 @@ body {
 }
 
 .question-1 {
-  font-size: 45px;
+  font-size: 35px;
   text-align: center;
   font-weight: 600;
   font-family: "Inconsolata", monospace;
@@ -112,21 +116,78 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-size: 30px;
-  font-weight: 600;
-  font-family: "Inconsolata", monospace;
-  text-align: center;
 }
 
 .answer-options {
   background-color: #fff;
   color: rgba(129, 125, 255, 1);
-  font-weight: 700;
+  font-weight: 750;
   width: 50%;
   margin: 0 auto;
   padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 30px;
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.next-question-button {
+  background-color: rgba(255, 137, 0, 1);
+  color: #fff;
+  font-weight: 600;
+  width: 25%;
+  margin: 0 auto;
+  padding: 1rem;
   border: none;
+  border-radius: 0.5rem;
+  font-size: 25px;
+  font-family: "Inconsolata", monospace;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.next-question-button:hover {
+  background-color: rgb(226, 121, 0);
+  transition: 0.4s;
+}
+
+.pop-up {
+  background-color: rgba(15, 169, 88, 1);
+  font-family: "Inconsolata", monospace;
+  text-align: center;
+  line-height: 3.5rem;
+  color: #fff;
+  padding: 3rem;
+  color: #000;
+  font-weight: 700;
+  width: 30%;
   border-radius: 1rem;
+  font-size: 25px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+.pop-up-button {
+  width: 35%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: #000;
 }
 
 /* END OF CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */

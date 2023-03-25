@@ -39,24 +39,52 @@
     </div>
 
     <div class="quiz">
-      <h2 class="question-1-header">question 1 out of 5</h2>
-      <h4 class="question-1">
-        do you tend to talk more than usual when you're drinking?
-      </h4>
+      <!-- START OF THE FIRST QUESTION CONTENT -->
+      <div class="first-question-content">
+        <h2 class="question-1-header">question 1 out of 5</h2>
+        <h4 class="question-1">
+          do you tend to talk more than usual when you're drinking?
+        </h4>
 
-      <div class="answers">
-        <label class="answer-options">
-          <input type="radio" name="answer" value="yes" />
-          absolutely!
-        </label>
+        <div class="answers">
+          <label for="answer-1" class="answer-options answer-option-1">
+            <input
+              type="radio"
+              class="answer-1"
+              id="answer-1"
+              name="answer"
+              value="yes"
+            />
+            absolutely =)
+          </label>
 
-        <label class="answer-options">
-          <input type="radio" name="answer" value="no" />
-          not really
-        </label>
+          <label for="answer-2" class="answer-options answer-option-2">
+            <input
+              type="radio"
+              class="answer-2"
+              id="answer-2"
+              name="answer"
+              value="no"
+            />
+            meh, not really :/
+          </label>
+        </div>
+
+        <button type="button" class="next-question-button">
+          next question
+        </button>
       </div>
+      <!-- END OF THE FIRST QUESTION CONTENT -->
     </div>
 
+    <div class="pop-up">
+      <h3 class="pop-up-content">
+        we see u're having fun but before you go to the next question, please
+        select an answer for the current one :)
+      </h3>
+
+      <button class="pop-up-button">got it!</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
