@@ -233,7 +233,7 @@ input[type="radio"] {
   .next-question-button,
   .second-next-question-button,
   .third-next-question-button {
-    width: 40%;
+    width: 70%;
   }
 
   .pop-up {
@@ -242,6 +242,12 @@ input[type="radio"] {
 
   .pop-up-button {
     width: 70%;
+  }
+
+  .answer-options,
+  .second-answer-options,
+  .third-answer-options {
+    width: 90%;
   }
 }
 
@@ -272,6 +278,18 @@ input[type="radio"] {
 
   .pop-up-button {
     width: 50%;
+  }
+
+  .next-question-button,
+  .second-next-question-button,
+  .third-next-question-button {
+    width: 70%;
+  }
+
+  .answer-options,
+  .second-answer-options,
+  .third-answer-options {
+    width: 90%;
   }
 }
 
