@@ -83,17 +83,18 @@ body {
 
 /* CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */
 
-.quiz {
-  display: none;
-}
-
-.first-question-content {
+.first-question-content,
+.second-question-content,
+.third-question-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  display: none;
 }
 
-.question-1-header {
+.question-1-header,
+.question-2-header,
+.question-3-header {
   text-align: center;
   font-size: 30px;
   font-weight: 600;
@@ -101,7 +102,9 @@ body {
   color: rgb(49, 49, 49);
 }
 
-.question-1 {
+.question-1,
+.question-2,
+.question-3 {
   font-size: 35px;
   text-align: center;
   font-weight: 600;
@@ -112,13 +115,17 @@ body {
   border: none;
 }
 
-.answers {
+.answers,
+.second-question-answers,
+.third-question-answers {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.answer-options {
+.answer-options,
+.second-answer-options,
+.third-answer-options {
   background-color: #fff;
   color: rgba(129, 125, 255, 1);
   font-weight: 750;
@@ -138,7 +145,9 @@ input[type="radio"] {
   appearance: none;
 }
 
-.next-question-button {
+.next-question-button,
+.second-next-question-button,
+.third-next-question-button {
   background-color: rgba(255, 137, 0, 1);
   color: #fff;
   font-weight: 600;
@@ -153,7 +162,9 @@ input[type="radio"] {
   transition: 0.4s;
 }
 
-.next-question-button:hover {
+.next-question-button:hover,
+.second-next-question-button:hover,
+.third-next-question-button:hover {
   background-color: rgb(226, 121, 0);
   transition: 0.4s;
 }
@@ -218,6 +229,20 @@ input[type="radio"] {
     width: 80%;
     font-size: 20px;
   }
+
+  .next-question-button,
+  .second-next-question-button,
+  .third-next-question-button {
+    width: 40%;
+  }
+
+  .pop-up {
+    width: 60%;
+  }
+
+  .pop-up-button {
+    width: 70%;
+  }
 }
 
 /* Styles for screens between 600px and 900px */
@@ -240,6 +265,14 @@ input[type="radio"] {
     width: 60%;
     font-size: 22px;
   }
+
+  .pop-up {
+    width: 60%;
+  }
+
+  .pop-up-button {
+    width: 50%;
+  }
 }
 
 /* Styles for screens between 900px and 1350px */
@@ -261,5 +294,13 @@ input[type="radio"] {
   .start-button {
     width: 60%;
     font-size: 22px;
+  }
+
+  .pop-up {
+    width: 50%;
+  }
+
+  .pop-up-button {
+    width: 40%;
   }
 }
