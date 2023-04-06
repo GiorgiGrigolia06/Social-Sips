@@ -215,6 +215,34 @@ input[type="radio"] {
   color: #000;
 }
 
+.results {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inconsolata", monospace;
+  gap: 2rem;
+}
+
+.results-header {
+  display: none;
+  color: #fff;
+  font-size: 50px;
+}
+
+.result-page-positive,
+.result-page-negative {
+  display: none;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.2rem;
+  background-color: rgba(255, 111, 114, 1);
+  line-height: 150%;
+}
+
 /* END OF CSS FOR QUIZ (NOT VISIBLE UNTIL BUTTON IS CLICKED) */
 
 /* Styles for screens smaller than 600px */

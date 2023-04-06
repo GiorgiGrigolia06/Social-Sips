@@ -73,6 +73,11 @@ const fourthQuestionContent = document.querySelector(
 );
 const fifthQuestionContent = document.querySelector(".fifth-question-content");
 
+// RESULT PAGES //
+const resultPagePositive = document.querySelector(".result-page-positive");
+const resultPageNegative = document.querySelector(".result-page-negative");
+const resultsHeader = document.querySelector(".results-header");
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 // Starting a quiz when the button is pressed //
@@ -109,10 +114,7 @@ radioButtons.forEach((radioButton) => {
   });
 });
 
-// Retrieving user input //
-const selectedAnswer = localStorage.getItem("selectedAnswer");
-
-// Events that happen if the "next question button" is clicked but there is no user input //
+// Events that happen if the "next question button" is clicked //
 nextQuestionButton.addEventListener("click", () => {
   if (!answerOptionRadio1.checked && !answerOptionRadio2.checked) {
     quiz.style.opacity = "25%";
@@ -158,16 +160,12 @@ radioButtons2.forEach((radioButton2) => {
   });
 });
 
-// Retrieving user input //
-const selectedAnswer2 = localStorage.getItem("selectedAnswer2");
-
-// Events that happen if the "next question button" is clicked but there is no user input //
+// Events that happen if the "next question button" is clicked //
 secondNextQuestionButton.addEventListener("click", () => {
   if (!secondAnswerOptionRadio1.checked && !secondAnswerOptionRadio2.checked) {
     quiz.style.opacity = "25%";
     popUp.style.display = "block";
   } else {
-    firstQuestionContent.style.display = "none";
     secondQuestionContent.style.display = "none";
     thirdQuestionContent.style.display = "flex";
   }
@@ -203,17 +201,12 @@ radioButtons3.forEach((radioButton3) => {
   });
 });
 
-// Retrieving user input //
-const selectedAnswer3 = localStorage.getItem("selectedAnswer3");
-
-// Events that happen if the "next question button" is clicked but there is no user input //
+// Events that happen if the "next question button" is clicked //
 thirdNextQuestionButton.addEventListener("click", () => {
   if (!thirdAnswerOptionRadio1.checked && !thirdAnswerOptionRadio2.checked) {
     quiz.style.opacity = "25%";
     popUp.style.display = "block";
   } else {
-    firstQuestionContent.style.display = "none";
-    secondQuestionContent.style.display = "none";
     thirdQuestionContent.style.display = "none";
     fourthQuestionContent.style.display = "flex";
   }
@@ -249,18 +242,12 @@ radioButtons4.forEach((radioButton4) => {
   });
 });
 
-// Retrieving user input //
-const selectedAnswer4 = localStorage.getItem("selectedAnswer4");
-
-// Events that happen if the "next question button" is clicked but there is no user input //
+// Events that happen if the "next question button" is clicked //
 fourthNextQuestionButton.addEventListener("click", () => {
   if (!fourthAnswerOptionRadio1.checked && !fourthAnswerOptionRadio2.checked) {
     quiz.style.opacity = "25%";
     popUp.style.display = "block";
   } else {
-    firstQuestionContent.style.display = "none";
-    secondQuestionContent.style.display = "none";
-    thirdQuestionContent.style.display = "none";
     fourthQuestionContent.style.display = "none";
     fifthQuestionContent.style.display = "flex";
   }
@@ -296,19 +283,55 @@ radioButtons5.forEach((radioButton5) => {
   });
 });
 
-// Retrieving user input //
-const selectedAnswer5 = localStorage.getItem("selectedAnswer5");
-
-// Events that happen if the "see results" is clicked but there is no user input //
+// Events that happen if the "see results" is clicked //
 resultsButton.addEventListener("click", () => {
+  // Retrieving user input //
+  const selectedAnswer = sessionStorage.getItem("selectedAnswer");
+  const selectedAnswer2 = sessionStorage.getItem("selectedAnswer2");
+  const selectedAnswer3 = sessionStorage.getItem("selectedAnswer3");
+  const selectedAnswer4 = sessionStorage.getItem("selectedAnswer4");
+  const selectedAnswer5 = sessionStorage.getItem("selectedAnswer5");
+
+  // Counter variable to count the number of "yes" values
+  let yesCount = 0;
+
   if (!fifthAnswerOptionRadio1.checked && !fifthAnswerOptionRadio2.checked) {
     quiz.style.opacity = "25%";
     popUp.style.display = "block";
   } else {
-    firstQuestionContent.style.display = "none";
-    secondQuestionContent.style.display = "none";
-    thirdQuestionContent.style.display = "none";
-    fourthQuestionContent.style.display = "none";
-    fifthQuestionContent.style.display = "none";
+    // Check if each value is "yes" and increment the counter if it is
+    if (selectedAnswer === "yes") {
+      yesCount++;
+    }
+    if (selectedAnswer2 === "yes") {
+      yesCount++;
+    }
+    if (selectedAnswer3 === "yes") {
+      yesCount++;
+    }
+    if (selectedAnswer4 === "yes") {
+      yesCount++;
+    }
+    if (selectedAnswer5 === "yes") {
+      yesCount++;
+    }
+
+    // Check if at least 3 values are "yes"
+    if (yesCount >= 3) {
+      // Code to execute if at least 3 values are "yes"
+      fifthQuestionContent.style.display = "none";
+      resultsHeader.style.display = "block";
+      resultPagePositive.style.display = "block";
+    } else {
+      // Code to execute if less than 3 values are "yes"
+      fifthQuestionContent.style.display = "none";
+      resultsHeader.style.display = "block";
+      resultPageNegative.style.display = "block";
+    }
   }
+});
+
+// Clearing session storage when the page is reloaded //
+window.addEventListener("beforeunload", function () {
+  sessionStorage.clear();
 });
