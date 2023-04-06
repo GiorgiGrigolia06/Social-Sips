@@ -295,6 +295,18 @@ input[type="radio"] {
   .fifth-answer-options {
     width: 90%;
   }
+
+  .results {
+    width: 90%;
+  }
+  .results-header {
+    font-size: 30px;
+  }
+  .result-page-positive,
+  .result-page-negative {
+    font-size: 30px;
+    padding: 1rem;
+  }
 }
 
 /* Styles for screens between 600px and 900px */
@@ -341,6 +353,18 @@ input[type="radio"] {
   .fifth-answer-options {
     width: 90%;
   }
+
+  .results {
+    width: 80%;
+  }
+  .results-header {
+    font-size: 40px;
+  }
+  .result-page-positive,
+  .result-page-negative {
+    font-size: 35px;
+    padding: 1.5rem;
+  }
 }
 
 /* Styles for screens between 900px and 1350px */
@@ -370,5 +394,17 @@ input[type="radio"] {
 
   .pop-up-button {
     width: 40%;
+  }
+
+  .results {
+    width: 60%;
+  }
+  .results-header {
+    font-size: 50px;
+  }
+  .result-page-positive,
+  .result-page-negative {
+    font-size: 40px;
+    padding: 2rem;
   }
 }
